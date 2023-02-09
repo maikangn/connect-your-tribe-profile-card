@@ -1,8 +1,49 @@
 <%- include('./partials/head') %>
 
 <article>
-  <h1>Hallo wereld!</h1>
-  <p>Alles werk! Laat dit visitekaartje in je browser aan een docent zien :D</p>
+  <header>
+    <h1> <%= member.name %> <%= member.surname %> </h1>
+ 
+    <img src="<%= member.avatar %>" alt="Creative Coder">
+
+    <h2 class="beschrijving"><em>Student Frontend Design & Development</em></h2>
+  </header>
+  
+  <div class="tabs">
+    <div class="tab">
+      <input type="radio" id="tab-1" name="tab-group-1" checked>
+      <label for="tab-1">About me</label>
+      <div class="content">
+        <p>✨ Get to know more about me ✨</p>
+        <hr>
+        <h4>Hi there! My name is <%= member.name %>, I am 24 years old and I currently live in Amsterdam together with my partner.
+          I first got introduced to coding when I was young and I would love to expand my knowledge in HTML, CSS and JavaScript! </h4>
+      </div>
+    </div>
+    <div class="tab">
+      <input type="radio" id="tab-2" name="tab-group-1">
+      <label for="tab-2">Study choice</label>
+      <div class="content">
+        <p>💻 Why did I choose FDND?</p>
+        <hr>
+        <h4>I used to study HBO-ICT Software Engineering but I soon found out that I enjoy working with frontend much more than backend.
+          So when I found out that this particular Associate Degree exists, I enrolled ASAP. </h4>
+       
+      </div>
+    </div>
+    <div class="tab">
+      <input type="radio" id="tab-3" name="tab-group-1">
+      <label for="tab-3">Hobbies</label>
+      <div class="content">
+        <p>❤️ What do I like?</p>
+        <hr>
+        <h4>In my free time I like to play videogames like League of Legends and eating out at restaurants.
+          My favourite cuisine is Asian food, like Vietnamese pho or kbbq.
+          I also enjoy watching (anime) series and doing Douyin nails. The more charms/gems, the better! </h4>
+      </div>
+    </div>
+  </div>
+
 </article>
 
 <%- include('./partials/foot') %>
